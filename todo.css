@@ -1,0 +1,250 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(135deg, #81ffef 10%, #f067b4 100%);
+  font-family: "Albert Sans", sans-serif;
+  color: black;
+}
+
+ul {
+  list-style: none;
+}
+
+header,
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.border_box {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+h1 {
+  font-style: italic;
+  font-weight: 800;
+  font-size: 5.6rem;
+  font-
+}
+
+h4 {
+  opacity: 60%;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+form {
+  justify-content: center;
+}
+
+input {
+  border-radius: 8px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  width: 60vw;
+  height: 10vh;
+  padding: 2px;
+  text-align: center;
+  background-color: transparent;
+  resize: none;
+  outline: none;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+textarea {
+  border-radius: 8px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  margin-bottom: 2vh;
+  margin-top: 4vh;
+  width: 60vw;
+  height: 10vh;
+  padding: 2%;
+  text-align: left;
+  background-color: transparent;
+  font-size: 1rem;
+  font-weight: 400;
+  /* color: white; */
+  font-family: "Albert Sans", sans-serif;
+}
+
+textarea::placeholder {
+  margin-bottom: 2vh;
+  margin-top: 4vh;
+  text-align: left;
+  padding: 2%;
+}
+
+select {
+  border-radius: 8px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  margin-bottom: 2vh;
+  width: 35vw;
+  height: 10vh;
+  padding: 4px;
+  text-align: center;
+  background-color: transparent;
+}
+
+.notif_box {
+  justify-content: center;
+  margin-top: 5px;
+}
+/* Button styling */
+
+.task_btn[type="submit"] {
+  outline: inherit;
+  background-color: white;
+  border-radius: 10%;
+  padding: 1%;
+  margin-top: 2;
+}
+button {
+  text-align: center;
+  background-color: transparent;
+  resize: none;
+  border: none;
+}
+.complete_btn i {
+  color: #abf066;
+  padding: 20px;
+  grid-area: b;
+}
+.delete_btn i {
+  color: darkred;
+  padding: 20px;
+  grid-area: d;
+}
+.pending_btn i {
+  color: white;
+  padding: 20px;
+  grid-area: c;
+}
+.fa-spinner,
+.fa-circle-check,
+.fa-trash {
+  pointer-events: none;
+}
+
+button:active, .delete_btn:active, .pending_btn:active, .complete_btn:active {
+transform: scale(0.98);
+box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+/* List styling */
+.task_list {
+  list-style: none;
+}
+
+.taskDiv {
+  width: 80%;
+  background-color: rgba(226, 115, 121, 0.41);
+  margin: 8% auto;
+
+  padding: 2% 10%;
+  display: grid;
+  grid-row: auto;
+  grid-template-areas:
+    "a a a"
+    "e e e"
+    "f f f"
+    "b c d";
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.pendingTask {
+  background-color: #dede81ab;
+}
+
+.completedTask {
+  background-color: #0b6b0b96;
+  opacity: 20;
+  color: white;
+  text-decoration: line-through;
+}
+
+li {
+  margin: auto;
+  grid-area: a;
+  font-size: 2rem;
+  padding: auto;
+  display: block;
+  border-bottom: 2px solid black;
+}
+
+.description {
+  grid-area: e;
+  margin: auto 0px;
+  padding: 10px;
+  color: black;
+}
+
+.High_priority {
+  color: rgb(223, 44, 59);
+  grid-area: f;
+  background-color: rgba(0, 0, 0, 0.498);
+  border-radius: 12px;
+  width: 50%;
+  justify-self: center;
+}
+.Medium_priority {
+  color: rgb(236, 217, 8);
+  grid-area: f;
+  background-color: rgba(0, 0, 0, 0.498);
+  border-radius: 12px;
+  width: 50%;
+  justify-self: center;
+}
+.Low_priority {
+  color: green;
+  grid-area: f;
+  background-color: rgba(0, 0, 0, 0.498);
+  border-radius: 12px;
+  width: 50%;
+  justify-self: center;
+}
+
+.completedTask p {
+  color: white;
+}
+
+.saved {
+  color: green;
+  position: absolute;
+  background-color: white;
+  margin: auto 2px;
+}
+
+.error {
+  position: absolute;
+  color: red;
+  background-color: rgba(0, 0, 0, 0.686);
+  padding: auto 12px;
+}
+
+.task_input,
+.task_description {
+  margin: 2%;
+  color: black;
+}
+
+.task_description {
+  margin-top: 0;
+  height: 20vh;
+  text-overflow: clip;
+  width: 60vw;
+}

@@ -1,0 +1,46 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,200;0,400;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/ee18a205ac.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="todo.css" />
+    <title>To-Do List App</title>
+  </head>
+  <body>
+    <header>
+      <div class="border_box">
+        <h1>Taskr</h1>
+        <h4>Keep track of what matters.</h4>
+      </div>
+    </header>
+    <form>
+      <input type="text" placeholder="Task title" class="task_input" />
+      <textarea
+        placeholder="Describe the task..."
+        class="task_description"
+      ></textarea>
+      <p>Prioirty Selection</p>
+      <select name="Priority" class="priority_input">
+        <option value="High">High</option>
+        <option value="Medium">Medium</option>
+        <option value="Low">Low</option>
+      </select>
+      <button type="submit" class="task_btn">Add to list</button>
+    </form>
+    <div class="notif_box"></div>
+
+    <div class="task_container">
+      <ul class="task_list"></ul>
+    </div>
+    <script src="./todo.js"></script>
+  </body>
+</html>
